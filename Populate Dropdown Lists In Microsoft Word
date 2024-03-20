@@ -1,0 +1,163 @@
+Sub RelawanPengajar1()
+    Dim xDirection As FormField
+    Dim xState As FormField
+    On Error Resume Next
+    Set xDirection = ActiveDocument.FormFields("RelawanPengajar")
+    Set xState = ActiveDocument.FormFields("DetailPengajar1")
+    If ((xDirection Is Nothing) Or (xState Is Nothing)) Then Exit Sub
+    With xState.DropDown.ListEntries
+        .Clear
+        Select Case xDirection.Result
+            Case "Ya"
+                .Add "Literasi"
+                .Add "Matematika"
+                .Add "IPA"
+            Case "Tidak"
+                .Add "Tidak"
+        End Select
+    End With
+End Sub
+
+Sub RelawanPengajar2()
+    Dim xDirection As FormField
+    Dim xState As FormField
+    On Error Resume Next
+    Set xDirection = ActiveDocument.FormFields("DetailPengajar1")
+    Set xState = ActiveDocument.FormFields("DetailPengajar2")
+    If ((xDirection Is Nothing) Or (xState Is Nothing)) Then Exit Sub
+    With xState.DropDown.ListEntries
+        .Clear
+        Select Case xDirection.Result
+            Case "Literasi"
+                .Add "Kelas Kecil (PAUD - 3 SD)"
+                .Add "Kelas Besar (4 SD - 6 SD)"
+            Case "Matematika"
+                .Add "Kelas Kecil (PAUD - 3 SD)"
+                .Add "Kelas Besar (4 SD - 6 SD)"
+            Case "IPA"
+                .Add "Kelas Kecil (PAUD - 3 SD)"
+                .Add "Kelas Besar (4 SD - 6 SD)"
+        End Select
+    End With
+End Sub
+
+Sub RelawanPengurus1()
+    Dim xDirection As FormField
+    Dim xState As FormField
+    On Error Resume Next
+    Set xDirection = ActiveDocument.FormFields("RelawanPengurus")
+    Set xState = ActiveDocument.FormFields("DetailPengurus1")
+    If ((xDirection Is Nothing) Or (xState Is Nothing)) Then Exit Sub
+    With xState.DropDown.ListEntries
+        .Clear
+        Select Case xDirection.Result
+            Case "Ya"
+                .Add "Staff Pendidikan"
+                .Add "Staff Kewirausahaan"
+                .Add "Staff Community Development (Comdev)"
+                .Add "Staff Humas"
+                .Add "Staff Kreatif - Graphic Designer"
+                .Add "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Kreatif - Content Writer"
+                .Add "Staff Kreatif - Video Editor"
+                .Add "Staff PSDM"
+            Case "Tidak"
+                .Add "Tidak"
+        End Select
+    End With
+End Sub
+
+Sub RelawanPengurus2()
+    Dim xDirection As FormField
+    Dim xState As FormField
+    On Error Resume Next
+    Set xDirection = ActiveDocument.FormFields("DetailPengurus1")
+    Set xState = ActiveDocument.FormFields("DetailPengurus2")
+    If ((xDirection Is Nothing) Or (xState Is Nothing)) Then Exit Sub
+    With xState.DropDown.ListEntries
+        .Clear
+        Select Case xDirection.Result
+            Case "Staff Pendidikan"
+                .Add "Staff Kewirausahaan"
+                .Add "Staff Community Development (Comdev)"
+                .Add "Staff Humas"
+                .Add "Staff Kreatif - Graphic Designer"
+                .Add "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Kreatif - Content Writer"
+                .Add "Staff Kreatif - Video Editor"
+                .Add "Staff PSDM"
+            Case "Staff Kewirausahaan"
+                .Add "Staff Pendidikan"
+                .Add "Staff Community Development (Comdev)"
+                .Add "Staff Humas"
+                .Add "Staff Kreatif - Graphic Designer"
+                .Add "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Kreatif - Content Writer"
+                .Add "Staff Kreatif - Video Editor"
+                .Add "Staff PSDM"
+            Case "Staff Community Development (Comdev)"
+                .Add "Staff Pendidikan"
+                .Add "Staff Kewirausahaan"
+                .Add "Staff Humas"
+                .Add "Staff Kreatif - Graphic Designer"
+                .Add "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Kreatif - Content Writer"
+                .Add "Staff Kreatif - Video Editor"
+                .Add "Staff PSDM"
+            Case "Staff Humas"
+                .Add "Staff Pendidikan"
+                .Add "Staff Kewirausahaan"
+                .Add "Staff Community Development (Comdev)"
+                .Add "Staff Kreatif - Graphic Designer"
+                .Add "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Kreatif - Content Writer"
+                .Add "Staff Kreatif - Video Editor"
+                .Add "Staff PSDM"
+            Case "Staff Kreatif - Graphic Designer"
+                .Add "Staff Pendidikan"
+                .Add "Staff Kewirausahaan"
+                .Add "Staff Community Development (Comdev)"
+                .Add "Staff Humas"
+                .Add "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Kreatif - Content Writer"
+                .Add "Staff Kreatif - Video Editor"
+                .Add "Staff PSDM"
+            Case "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Pendidikan"
+                .Add "Staff Kewirausahaan"
+                .Add "Staff Community Development (Comdev)"
+                .Add "Staff Humas"
+                .Add "Staff Kreatif - Graphic Designer"
+                .Add "Staff Kreatif - Content Writer"
+                .Add "Staff Kreatif - Video Editor"
+                .Add "Staff PSDM"
+            Case "Staff Kreatif - Content Writer"
+                .Add "Staff Pendidikan"
+                .Add "Staff Kewirausahaan"
+                .Add "Staff Community Development (Comdev)"
+                .Add "Staff Humas"
+                .Add "Staff Kreatif - Graphic Designer"
+                .Add "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Kreatif - Video Editor"
+                .Add "Staff PSDM"
+            Case "Staff Kreatif - Video Editor"
+                .Add "Staff Pendidikan"
+                .Add "Staff Kewirausahaan"
+                .Add "Staff Community Development (Comdev)"
+                .Add "Staff Humas"
+                .Add "Staff Kreatif - Graphic Designer"
+                .Add "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Kreatif - Content Writer"
+                .Add "Staff PSDM"
+            Case "Staff PSDM"
+                .Add "Staff Pendidikan"
+                .Add "Staff Kewirausahaan"
+                .Add "Staff Community Development (Comdev)"
+                .Add "Staff Humas"
+                .Add "Staff Kreatif - Graphic Designer"
+                .Add "Staff Kreatif - Photographer/Videographer"
+                .Add "Staff Kreatif - Content Writer"
+                .Add "Staff Kreatif - Video Editor"
+        End Select
+    End With
+End Sub
